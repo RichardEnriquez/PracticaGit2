@@ -6,7 +6,7 @@ Para crear un repositorio un nuevo repositorio (en mi caso usare git hub) aremos
 
 luego damos nombre al repositorio
 
-![1.1](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%201\1.1.png)
+![1.1](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%201/1.1.png)
 
 
 
