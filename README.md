@@ -1,101 +1,73 @@
-# PracticaGit2 
+# SwiftProject
+**Swift Project**
 
-Para crear un repositorio un nuevo repositorio (en mi caso usare git hub) aremos lo siguiente
-
-![1](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%201/1.png)
-
-luego damos nombre al repositorio
-
-![1.1](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%201/1.1.png)
+Este proyecto utiliza tecnologia de **Pods** para un **tabBar**, un **login** gracias a google y **RealmSwift** que se encargara de  CRUD  tambien este proyecto tiene **TableView** para mostrar los datos de **RealmSwift**
 
 
 
-después podremos verlo en nuestra lista de repositorios:
+**Partes destacables** 
 
-![2](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%201/2.png)
+En el siguiente código veremos como usamos el login de Google, si el usuario que intenta acceder a la aplicación y no tiene su sesión iniciada mandaremos al login de Google
+si pasa la autenticación de Google mandaremos al mainControler de la app en este caso sera EventView
 
-
-
-ahora tendremos que crear el repositorio clonándolo desde git bash
-
-![4](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%20%201\4.png)
+![image-20200226192040301](https://github.com/kiwiStucom/SwiftProject/blob/master/img/image-20200226192040301.png)
 
 
 
-![5](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%201/5.png)
+También una parte importante del codigo es TabBAr, en nuestro caso usamos Pods
+
+![image-20200229213658343](C:\Users\hugos\AppData\Roaming\Typora\typora-user-images\image-20200229213658343.png)
+
+![image-20200229213752728](C:\Users\hugos\AppData\Roaming\Typora\typora-user-images\image-20200229213752728.png)
+
+lo que hace este código es inicializar cada  ViewControler para poder usarlo y cambiarlo en el tabBAr 
+
+![image-20200229213948295](C:\Users\hugos\AppData\Roaming\Typora\typora-user-images\image-20200229213948295.png)
+
+las flechas indican que icono de imagen tendrán cada opción del TabBar 
+
+![image-20200229214126109](C:\Users\hugos\AppData\Roaming\Typora\typora-user-images\image-20200229214126109.png)
+
+cada clase tendra que ser extendida de UIViewController para poder ser usada en TabBarItem
 
 
 
-![6](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%201/6.png)
+Cuando se inicia la aplicacion y el usuario cambia de pantalla en cada ViewControler tenemos  el siguiente formato para mostrar los datos de Realm
 
-![7](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%201/8.png)
+Primero se instancia la base de datos RealmSwift atreves de una clase que es manager con un constructor privado:
 
+![image-20200229214856071](C:\Users\hugos\AppData\Roaming\Typora\typora-user-images\image-20200229214856071.png)
 
-
-![8](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%201/8.png)
-
-
-
-![9](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%201/9.png)
-
-Con esto podremos iniciar el repositorio y tener el clon en local 
-
-![10](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%201/10.png)
-
-ahora añadiremos u n archivo para que suba cambios y otra persona también lo haga sobre el mismo archivo 
-
-crearemos un archivo .doxc: y lo subimos 
-
-![11](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%201/11.png)
-
-![12](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%201/12.png)
+como vemos cuando se instancia RealmSwift y es primera vez que se llama al constructor y se cargaran los datos en RealmSwift para ver resultados en la aplicación despues de saber como funciona el constructor veremos como cargamos los datos
 
 
 
-luego tendremos que añadir al compañero al repositorio invitándolo:
+![image-20200229214350707](C:\Users\hugos\AppData\Roaming\Typora\typora-user-images\image-20200229214350707.png)
+
+como vemos en la imagen se llama al constructor luego solicitamos datos con una funcion que tiene al archivo Manager que lo que hace es cargar todos los datos de los ciclistas 
 
 
 
-![13](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%201/13.png)
+![image-20200229220033430](C:\Users\hugos\AppData\Roaming\Typora\typora-user-images\image-20200229220033430.png)
 
-ahora editare el archivo docx
-
-![14](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%201/14.png)
-
-hacemos un add comit y push para guardar cambios en repositorio
-
-![15](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%201/15.png)
+luego recorremos los resultados con un bucle y cargamos todos los datos en memoria para usarlo en un table view
 
 
 
-ahora el compañero tendrá que hacer lo mismo y para ver sus cambios tendré que hacer un pull al repositorio
+![image-20200229220439636](C:\Users\hugos\AppData\Roaming\Typora\typora-user-images\image-20200229220439636.png)
 
- ![17](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%201/17.png)
+para poder usar tableView tendremos que añadir un tableView a nuestro achivo .xib y capturarlo par luego delegarlo en nuestra clase donde queremos usarlo
 
-![16](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%201/16.png)
-
-
+![image-20200229220539305](C:\Users\hugos\AppData\Roaming\Typora\typora-user-images\image-20200229220539305.png)
 
 
 
-Ahora veremos como evitar que se suban archivos que no queremos:
+y por defecto tenemos que usar 2 funciones necesarias:
 
-primero creamos el siguiente archivo
+![image-20200229220637618](C:\Users\hugos\AppData\Roaming\Typora\typora-user-images\image-20200229220637618.png)
 
-![1](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%202/1.png)
+lo que hace esto es que en la tabla el tamaño de cada sección y cuantas filas abra 
 
+y con otra función daremos valor a cada sección con los datos que recuperamos de RealmSwift
 
-
-ahora editaremos (podemos hacerlo directamente con doble click o con nano)
-
-añadiremos los archivos o carpetas que queremos ignorar, en mi caso será la carpeta de datos
-
-![2](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%202/2.png)
-
-subimos cambios:
-
-![3](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%202/3.png)
-
-y veremos como se suben los cambios pero no el archivo que esta configurado para no ser subido 
-
-![4](https://github.com/RichardEnriquez/PracticaGit2/blob/master/imagenes/parte%202/4.png)
+![image-20200229220855491](C:\Users\hugos\AppData\Roaming\Typora\typora-user-images\image-20200229220855491.png)
